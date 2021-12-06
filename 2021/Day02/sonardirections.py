@@ -13,14 +13,11 @@ while i < lineCount:
     try:
         splitLine = sonarLines[i].split()
         if 'forward' in splitLine[0]:
-            print("Hit Forward")
             horiz = horiz + int(splitLine[1])
         elif 'up' in splitLine[0]:
-            print("Hit Up")
             depth = depth - int(splitLine[1])
 
         elif 'down' in splitLine[0]:
-            print("Hit Down")
             depth = depth + int(splitLine[1])
         else:
             pass
@@ -28,7 +25,7 @@ while i < lineCount:
         print(err)
         
     i = i + 1
-print(f' Horiz: {horiz} \n Depth: {depth} \n Multiply: {horiz * depth}')
+print(f'Task 1: \n Horiz: {horiz} \n Depth: {depth} \n Multiplied: {horiz * depth} \n\n')
 
 # Task 2
 depth = 0
@@ -52,4 +49,4 @@ while i < lineCount:
     except Exception as err:
         print(err)
     i = i + 1
-print(f' Horiz: {horiz} \n Depth: {depth} \n Multiply: {horiz * depth}')
+print(f'Task 2: \n  Horiz: {horiz} \n Depth: {depth} \n Multiplied: {horiz * depth}')
